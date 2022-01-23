@@ -225,26 +225,6 @@ elif n>350:
     res=1500
     print(res)'''
     
-#PAT-6 finding leaders in an array
-'''n=int(input("enter no of elements:"))
-l=[]
-a=0
-for i in range(n):
-    inp=int(input("enter no:"))
-    l.append(inp)
-
-for i in range(len(l)):
-    try:
-        if l[i]> l[i+1]:
-            a=1
-            print(l[i])
-        else:
-            a=0
-    except IndexError:
-        if a==0:
-            print("no leaders")'''
-    
-
 #removing all occurence of an item from a list
 '''l=[1,2,3,4,2]
 res=[]
@@ -291,59 +271,7 @@ for i in range(n,0,-1):
         d=d+1
     print()'''
 
- #caesar encryption
-'''import string
-def encrypt(l,k):
-    l_new=[]
-    chr=[i for i in string.ascii_lowercase]
-    for i in l:
-            x=(chr.index(i)+k)%26
-            l_new.append(chr[x])
-    for i in l_new: print(i,end='')
-
-s=input("enter a string:")
-k=int(input("enter the number of alphabets to jump:"))
-l_string=[i for i in s]
-encrypt(l_string,k)'''
-
-#encryption problem 
-#creating a dict with alphabets as key 
-#and their corresponding numbers as values
-'''alpha=[chr(n) for n in range(65,91)]
-digits=[n for n in range(1,27)]
-dict_alpha=dict(zip(alpha,digits))
-print(dict_alpha)
-
-msg=input("enter msg:")
-msg_encrypt=[]
-for i in msg:
-    msg_encrypt.append(dict_alpha[i]) 
-print(msg_encrypt)
-#creating a list of the corresponding numbers of the letters of the message   
-
-key=input("enter key:")
-key_encrypt=[]
-for i in key:
-    key_encrypt.append(dict_alpha[i])
-print(key_encrypt)
-#creating a list of the corresponding numbers of the letters of the key
-
-sum_encrypt=[]
-for i in range(len(msg)):
-    y=msg_encrypt[i]+key_encrypt[i]
-    #adding the corresponding numbers of the message and key
-    if y>26:
-        y=y-26
-    else:
-        pass
-    sum_encrypt.append(y)
-print(sum_encrypt)
-
-k=list(dict_alpha.keys())
-#getting the keys of the dict using the values from the sum_encrypt
-for i in sum_encrypt:
-    print(k[i],end='')'''
-
+ 
 #dividing string into substrings of length k and removing duplicates in those substrings
 '''s=input("enter string:")
 k=int(input("enter number:"))
@@ -359,34 +287,8 @@ for i in l:
             s=s+j
     print(s)'''
 
-#given n sequence of numbers compute the average of kth sequence(k<n/2) formed by
-#removing first kth element and last kth element from the sequence
-'''l=list(map(int,input("enter numbers:").split()))
-if len(l)>=10:
-    k=len(l)//2
-    for i in range(k):
-        sum=0
-        a=l[i+1:len(l)-i-1]
-        if a!=[]:
-            print(a)
-        else:
-            break
-        for j in a:
-            sum+=j
-            avg=sum/len(a)
-        print(avg)'''
 
-#cyclic shift of characters of string
-'''def shift(s):
-    global a
-    a=s[1:]+s[0]
-    return a
 
-s=input("enter a string:")
-print(s)
-for i in range(len(s)-1):
-    print(shift(s))
-    s=a'''
     
 
 
