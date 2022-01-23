@@ -1,11 +1,18 @@
-#cyclic shift of characters of string
-def shift(s):
-    global a
-    a=s[1:]+s[0]
-    return a
+def max(l):
+    cnt=0
+    key=l[0]
+    for i in range(len(l)-1):
+        try:
+            if key > l[i+1]:
+                cnt=1
+            else:
+                cnt=0
+                key=l[i+1]
+                
+        except IndexError:
+            print('reached the end of the array..')
+    print ('maximum element of the array:',key)
 
-s=input("enter a string:")
-print(s)
-for i in range(len(s)-1):
-    print(shift(s))
-    s=a
+#main
+l=list(map(int,input('enter space separated list elements:').split()))
+max(l)
